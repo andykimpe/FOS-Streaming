@@ -1,3 +1,6 @@
+<?php
+require("lang/lang.php");
+?>
 @extends('main')
 @section('content')
 <ul class="breadcrumb">
@@ -49,6 +52,24 @@
                                 <label class="control-label">Streamurl3 (backup):</label>
                                 <div class="controls">
                                     <input type="text" name="streamurl3" value="{{  isset($_POST['streamurl3']) ?  $_POST['streamurl3'] : $stream->streamurl3}}">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">tvg-id EPG:</label>
+                                <div class="controls">
+                                    <input type="text" name="tvgid" value="{{  isset($_POST['tvgid']) ?  $_POST['tvgid'] : $stream->tvgid}}">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">tvg-logo (Logo Channel):</label>
+                                <div class="controls">
+                                    <input type="text" name="tvglogo" value="{{  isset($_POST['tvglogo']) ?  $_POST['tvglogo'] : $stream->tvglogo}}">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">group-name:</label>
+                                <div class="controls">
+                                    <input type="text" name="groupname" value="{{  isset($_POST['groupname']) ?  $_POST['groupname'] : $stream->groupname}}">
                                 </div>
                             </div>
 
