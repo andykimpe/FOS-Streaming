@@ -121,9 +121,9 @@ CREATE TABLE IF NOT EXISTS `streams` (
   `trans_id` int(11) NOT NULL,
   `streamurl2` varchar(255) NOT NULL,
   `streamurl3` varchar(255) NOT NULL,
-  `tvg-id` varchar(200) NOT NULL,
-  `tvg-logo` varchar(200) NOT NULL,
-  `group-name` varchar(200) NOT NULL,
+  `tvgid` varchar(200) NOT NULL,
+  `tvglogo` varchar(200) NOT NULL,
+  `groupname` varchar(200) NOT NULL,
   `checker` tinyint(4) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
