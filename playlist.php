@@ -42,7 +42,7 @@ if(isset($_GET['m3u'])) {
     foreach($user->categories as $category) {
         foreach($category->streams as $stream) {
             if($stream->running == 1) {
-                file_put_contents('/tmp/tv_user.m3u', "#EXTINF:0," . $stream->name . "\r\n", FILE_APPEND);
+                file_put_contents('/tmp/tv_user.m3u', "#EXTINF:0 tvg-id=" . $stream->tvg-id . " tvg-logo=" . $stream->tvg-logo . " group-name=" . $stream->group-name . " ," . $stream->id . ". " . $stream->name . "\r\n", FILE_APPEND);
                 file_put_contents('/tmp/tv_user.m3u', "http://" . $setting->webip . ":" . $setting->webport . "/" . $user->username . "/" . $user->password . "/" . $stream->id . "\r\n", FILE_APPEND);
             }
         }
@@ -52,4 +52,3 @@ if(isset($_GET['m3u'])) {
     header('Content-Disposition: attachment; filename="tv_user.m3u"');
     readfile("/tmp/tv_user.m3u");
 }
-
