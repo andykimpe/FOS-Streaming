@@ -22,6 +22,9 @@ if (isset($_POST['submit'])) {
 
     $stream->streamurl2 = $_POST['streamurl2'];
     $stream->streamurl3 = $_POST['streamurl3'];
+    $stream->tvgid = $_POST['tvgid'];
+    $stream->tvglogo = $_POST['tvglogo'];
+    $stream->groupname = $_POST['groupname'];
 
     $stream->restream = 0;
     if(isset($_POST['restream'])) {
