@@ -1,4 +1,6 @@
 <?php
+echo '<div align="right"><H1><a href="lang/choose-lang.php"> Language </a></H1></div>';
+include('lang/lang.php');
 include('config.php');
 if(isset($_SESSION['user_id'])){
     header("location: dashboard.php");
@@ -7,7 +9,8 @@ if(isset($_SESSION['user_id'])){
 $error='';
 if (isset($_POST['submit'])) {
     if (empty($_POST['username']) || empty($_POST['password'])) {
-        $error = "Username or Password is invalid";
+
+        $error = TXT_USERNAME_PASSWOR_INVALID;
     }
     else
     {
@@ -21,7 +24,7 @@ if (isset($_POST['submit'])) {
             header("location: dashboard.php");
         } else {
 
-            $error = "Username or Password is invalid";
+            $error = TXT_USERNAME_PASSWOR_INVALID;
 
         }
     }
@@ -31,7 +34,7 @@ if (isset($_POST['submit'])) {
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>FOS-Streaming panel by Tyfix</title>
+    <title><?php echo TXT_FOS_STREAMING_CONTROL_PANEL; ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link id="bootstrap-style" href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
@@ -71,28 +74,28 @@ if (isset($_POST['submit'])) {
                                 </div>";
                         }
                     ?>
-                    <h1><b>FOS-Streaming panel</b></h1>
+                    <h1><b><?php echo TXT_FOS_STREAMING_CONTROL_PANEL; ?></b></h1>
                 </div>
 
-                <h2>Login to your account</h2>
+                <h2><?php echo TXT_LOGIN_YOUR_ACCOUNT; ?></h2>
                 <form class="form-horizontal" action="" method="post">
 
                     <fieldset>
 
                         <div class="input-prepend" title="Username">
                             <span class="add-on"><i class="halflings-icon user"></i></span>
-                            <input class="input-large span10" name="username" id="username" type="text" placeholder="type username"/>
+                            <input class="input-large span10" name="username" id="username" type="text" placeholder="<?php echo TXT_TYPE_USERNAME; ?>"/>
                         </div>
                         <div class="clearfix"></div>
 
                         <div class="input-prepend" title="Password">
                             <span class="add-on"><i class="halflings-icon lock"></i></span>
-                            <input class="input-large span10" name="password" id="password" type="password" placeholder="type password"/>
+                            <input class="input-large span10" name="password" id="password" type="password" placeholder="<?php echo TXT_TYPE_PASSWORD; ?>"/>
                         </div>
                         <div class="clearfix"></div>
 
                         <div class="button-login">
-                            <button type="submit" name="submit" class="btn btn-primary">Login</button>
+                            <button type="submit" name="submit" class="btn btn-primary"><?php echo TXT_LOGIN; ?></button>
                         </div>
                         <div class="clearfix"></div>
                 </form>
