@@ -1,4 +1,11 @@
 ALTER TABLE `streams` ADD `tvgid` VARCHAR( 200 ) NOT NULL AFTER `streamurl3` ,
+ADD `tvglogo` VARCHAR( 255 ) NOT NULL AFTER `streamurl4` ,
+ADD `tvglogo` VARCHAR( 255 ) NOT NULL AFTER `streamurl5` ,
+ADD `tvglogo` VARCHAR( 255 ) NOT NULL AFTER `streamurl6` ,
+ADD `tvglogo` VARCHAR( 255 ) NOT NULL AFTER `streamurl7` ,
+ADD `tvglogo` VARCHAR( 255 ) NOT NULL AFTER `streamurl8` ,
+ADD `tvglogo` VARCHAR( 255 ) NOT NULL AFTER `streamurl9` ,
+ADD `tvglogo` VARCHAR( 255 ) NOT NULL AFTER `streamurl10` ,
 ADD `tvglogo` VARCHAR( 200 ) NOT NULL AFTER `tvgid` ,
 ADD `tvgname` VARCHAR( 200 ) NOT NULL AFTER `tvglogo` ,
 ADD `grouptitle` VARCHAR( 200 ) NOT NULL AFTER `tvgname` ;
